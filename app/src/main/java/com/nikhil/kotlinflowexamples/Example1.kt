@@ -25,7 +25,7 @@ import kotlinx.coroutines.runBlocking
     simple().forEach { value -> println(value) }
 }*/
 
-@InternalCoroutinesApi
+/*@InternalCoroutinesApi
 fun main() = runBlocking<Unit> {
     println("4. Thread name = ${Thread.currentThread().name}")
     // Launch a concurrent coroutine to check if the main thread is blocked
@@ -40,7 +40,7 @@ fun main() = runBlocking<Unit> {
     simple().collect { value ->
         println(value)
     }
-}
+}*/
 
 /**
  * 1.
@@ -81,10 +81,11 @@ fun main() = runBlocking<Unit> {
  * This code waits 100ms before printing each number without blocking the main thread.
  * This is verified by printing "I'm not blocked" every 100ms from a separate coroutine that is running in the main thread:
  */
+/*
 private fun simple(): Flow<Int> = flow { // flow builder
     for (i in 1..3) {
         delay(1000) // pretend we are doing something useful here
 //    Thread.sleep(1000)
         emit(i) // emit next value
     }
-}
+}*/
